@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marginalia — A Digital Herbarium</title>
+<meta name="description" content="Marginalia is a small digital herbarium cataloguing pressed plant specimens, field notes, and their stories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">Marginalia</span>
+      <span class="brand-sub">Digital Herbarium No. 7</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle">
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Toggle navigation">☰ Menu</label>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="field-notes.html">Field Notes</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Est. in a kitchen drawer, 2019</span>
+      <h1>A quiet archive of pressed leaves and small discoveries.</h1>
+      <p>
+        Marginalia keeps a running catalogue of specimens collected on walks,
+        windowsills, and roadside verges — each one pressed, labelled, and
+        logged with the patience of a much older kind of science.
+      </p>
+
+      <dl class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" id="specimen-count" data-target="128">0</span>
+          <span class="stat-label">Specimens logged</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">34</span>
+          <span class="stat-label">Families represented</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">6</span>
+          <span class="stat-label">Years running</span>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="featured">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Recently pressed</h2>
+        <a href="collection.html">View full collection →</a>
+      </div>
+
+      <div class="specimen-grid">
+
+        <article class="specimen-card" data-specimen-id="MG-014" data-family="Asteraceae">
+          <span class="specimen-tape">MG-014</span>
+          <h3>Ox-eye Daisy</h3>
+          <span class="latin">Leucanthemum vulgare</span>
+          <p>Found colonising a gravel verge two streets from home; pressed within the hour to keep the white petals from curling.</p>
+          <ul class="specimen-meta">
+            <li><span>Family</span><b>Asteraceae</b></li>
+            <li><span>Collected</span><b>12 May 2026</b></li>
+            <li><span>Status</span><span class="status-pill" data-status="pressed">Pressed</span></li>
+          </ul>
+        </article>
+
+        <article class="specimen-card" data-specimen-id="MG-021" data-family="Fabaceae">
+          <span class="specimen-tape">MG-021</span>
+          <h3>Red Clover</h3>
+          <span class="latin">Trifolium pratense</span>
+          <p>A cluster from the edge of a fallow field, still holding its colour a week later — unusual for the genus.</p>
+          <ul class="specimen-meta">
+            <li><span>Family</span><b>Fabaceae</b></li>
+            <li><span>Collected</span><b>19 May 2026</b></li>
+            <li><span>Status</span><span class="status-pill" data-status="digitizing">Digitizing</span></li>
+          </ul>
+        </article>
+
+        <article class="specimen-card" data-specimen-id="MG-006" data-family="Polypodiaceae">
+          <span class="specimen-tape">MG-006</span>
+          <h3>Common Polypody</h3>
+          <span class="latin">Polypodium vulgare</span>
+          <p>One of the oldest entries in the archive — a fern frond that has since been scanned, boxed, and shelved.</p>
+          <ul class="specimen-meta">
+            <li><span>Family</span><b>Polypodiaceae</b></li>
+            <li><span>Collected</span><b>03 Oct 2020</b></li>
+            <li><span>Status</span><span class="status-pill" data-status="archived">Archived</span></li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap prose">
+      <span class="eyebrow">About the archive</span>
+      <h2>Why keep a herbarium at all?</h2>
+      <p>
+        Every specimen here follows the same small ritual: collect, press
+        between blotting paper, wait two weeks, then label with the date,
+        the place, and whatever seemed worth remembering about the plant
+        that day. Nothing about the process is fast, which is more or less
+        the point.
+      </p>
+      <blockquote>
+        A pressed leaf is a kind of sentence — it keeps the shape of a
+        moment long after the moment itself has gone.
+      </blockquote>
+      <p>
+        The <a href="collection.html">full collection</a> is searchable by
+        name, family, or status. If you've found something worth logging,
+        the <a href="field-notes.html">field notes</a> page takes new
+        submissions.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Marginalia Herbarium</span>
+  <span>Pressed, scanned, and catalogued by hand</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

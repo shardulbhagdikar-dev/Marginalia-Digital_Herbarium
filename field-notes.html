@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Notes — Marginalia</title>
+<meta name="description" content="Submit a specimen sighting to the Marginalia herbarium.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">Marginalia</span>
+      <span class="brand-sub">Digital Herbarium No. 7</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle">
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Toggle navigation">☰ Menu</label>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="field-notes.html" aria-current="page">Field Notes</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding-bottom: 24px;">
+    <div class="wrap">
+      <span class="eyebrow">Log a sighting</span>
+      <h1>Field notes</h1>
+      <p>
+        Found something worth pressing? Send over the details and it will
+        be reviewed for the next accession batch. Fields marked
+        <span class="required-mark">*</span> are required.
+      </p>
+    </div>
+  </section>
+
+  <section id="submit" style="border-top: none; padding-top: 8px;">
+    <div class="wrap">
+
+      <form class="field-form" id="sighting-form" novalidate>
+
+        <fieldset>
+          <legend>Who's logging this</legend>
+
+          <div class="field-row">
+            <label for="reporter-name">Your name <span class="required-mark">*</span></label>
+            <input type="text" id="reporter-name" name="reporter-name" required autocomplete="name">
+          </div>
+
+          <div class="field-row">
+            <label for="reporter-email">Email <span class="required-mark">*</span></label>
+            <input type="email" id="reporter-email" name="reporter-email" required autocomplete="email">
+            <span class="hint">Only used if a specimen ID needs confirming.</span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>What you found</legend>
+
+          <div class="field-row">
+            <label for="plant-name">Common name (if known)</label>
+            <input type="text" id="plant-name" name="plant-name" placeholder="e.g. Ox-eye Daisy">
+          </div>
+
+          <div class="field-row">
+            <label for="plant-family">Family <span class="required-mark">*</span></label>
+            <select id="plant-family" name="plant-family" required>
+              <option value="" selected disabled>Choose one if you can guess it</option>
+              <option value="asteraceae">Asteraceae</option>
+              <option value="fabaceae">Fabaceae</option>
+              <option value="lamiaceae">Lamiaceae</option>
+              <option value="plantaginaceae">Plantaginaceae</option>
+              <option value="unknown">Not sure</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <label for="found-date">Date found <span class="required-mark">*</span></label>
+            <input type="date" id="found-date" name="found-date" required>
+          </div>
+
+          <div class="field-row">
+            <label for="found-location">Location</label>
+            <input type="text" id="found-location" name="found-location" placeholder="e.g. gravel verge, Elm Street">
+          </div>
+
+          <div class="field-row">
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" placeholder="Anything worth remembering — colour, scent, how it grew…"></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="submit-btn">Submit sighting</button>
+        <p id="form-status" role="status"></p>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Marginalia Herbarium</span>
+  <span>Pressed, scanned, and catalogued by hand</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collection — Marginalia</title>
+<meta name="description" content="Browse and filter the full Marginalia specimen catalogue.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">Marginalia</span>
+      <span class="brand-sub">Digital Herbarium No. 7</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle">
+    <label class="nav-toggle-btn" for="nav-toggle" aria-label="Toggle navigation">☰ Menu</label>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html" aria-current="page">Collection</a></li>
+        <li><a href="field-notes.html">Field Notes</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding-bottom: 24px;">
+    <div class="wrap">
+      <span class="eyebrow">The full catalogue</span>
+      <h1>Collection</h1>
+      <p>Every specimen currently logged, searchable by name and filterable by status. Twelve entries shown here — the drawer holds many more.</p>
+    </div>
+  </section>
+
+  <section id="catalogue" style="border-top: none; padding-top: 8px;">
+    <div class="wrap">
+
+      <div class="toolbar">
+        <input
+          type="text"
+          id="specimen-search"
+          placeholder="Search by common or Latin name…"
+          aria-label="Search specimens">
+
+        <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="pressed" aria-pressed="false">Pressed</button>
+        <button class="filter-btn" data-filter="digitizing" aria-pressed="false">Digitizing</button>
+        <button class="filter-btn" data-filter="archived" aria-pressed="false">Archived</button>
+      </div>
+
+      <p id="result-count" role="status"></p>
+
+      <div class="table-scroll">
+        <table id="specimen-table">
+          <caption>Marginalia specimen log — updated 19 July 2026</caption>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Common name</th>
+              <th scope="col">Latin name</th>
+              <th scope="col">Family</th>
+              <th scope="col">Collected</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="pressed">
+              <td class="id-cell">MG-014</td>
+              <td>Ox-eye Daisy</td>
+              <td class="latin">Leucanthemum vulgare</td>
+              <td>Asteraceae</td>
+              <td>2026-05-12</td>
+              <td><span class="status-pill" data-status="pressed">Pressed</span></td>
+            </tr>
+            <tr data-status="digitizing">
+              <td class="id-cell">MG-021</td>
+              <td>Red Clover</td>
+              <td class="latin">Trifolium pratense</td>
+              <td>Fabaceae</td>
+              <td>2026-05-19</td>
+              <td><span class="status-pill" data-status="digitizing">Digitizing</span></td>
+            </tr>
+            <tr data-status="archived">
+              <td class="id-cell">MG-006</td>
+              <td>Common Polypody</td>
+              <td class="latin">Polypodium vulgare</td>
+              <td>Polypodiaceae</td>
+              <td>2020-10-03</td>
+              <td><span class="status-pill" data-status="archived">Archived</span></td>
+            </tr>
+            <tr data-status="pressed">
+              <td class="id-cell">MG-018</td>
+              <td>Herb Robert</td>
+              <td class="latin">Geranium robertianum</td>
+              <td>Geraniaceae</td>
+              <td>2026-05-02</td>
+              <td><span class="status-pill" data-status="pressed">Pressed</span></td>
+            </tr>
+            <tr data-status="archived">
+              <td class="id-cell">MG-003</td>
+              <td>Broadleaf Plantain</td>
+              <td class="latin">Plantago major</td>
+              <td>Plantaginaceae</td>
+              <td>2020-04-27</td>
+              <td><span class="status-pill" data-status="archived">Archived</span></td>
+            </tr>
+            <tr data-status="digitizing">
+              <td class="id-cell">MG-025</td>
+              <td>Yarrow</td>
+              <td class="latin">Achillea millefolium</td>
+              <td>Asteraceae</td>
+              <td>2026-06-01</td>
+              <td><span class="status-pill" data-status="digitizing">Digitizing</span></td>
+            </tr>
+            <tr data-status="pressed">
+              <td class="id-cell">MG-029</td>
+              <td>Bindweed</td>
+              <td class="latin">Convolvulus arvensis</td>
+              <td>Convolvulaceae</td>
+              <td>2026-06-14</td>
+              <td><span class="status-pill" data-status="pressed">Pressed</span></td>
+            </tr>
+            <tr data-status="archived">
+              <td class="id-cell">MG-009</td>
+              <td>Dandelion</td>
+              <td class="latin">Taraxacum officinale</td>
+              <td>Asteraceae</td>
+              <td>2021-03-15</td>
+              <td><span class="status-pill" data-status="archived">Archived</span></td>
+            </tr>
+            <tr data-status="pressed">
+              <td class="id-cell">MG-031</td>
+              <td>Wild Bergamot</td>
+              <td class="latin">Monarda fistulosa</td>
+              <td>Lamiaceae</td>
+              <td>2026-07-02</td>
+              <td><span class="status-pill" data-status="pressed">Pressed</span></td>
+            </tr>
+            <tr data-status="digitizing">
+              <td class="id-cell">MG-033</td>
+              <td>Chicory</td>
+              <td class="latin">Cichorium intybus</td>
+              <td>Asteraceae</td>
+              <td>2026-07-09</td>
+              <td><span class="status-pill" data-status="digitizing">Digitizing</span></td>
+            </tr>
+            <tr data-status="archived">
+              <td class="id-cell">MG-011</td>
+              <td>Lady Fern</td>
+              <td class="latin">Athyrium filix-femina</td>
+              <td>Athyriaceae</td>
+              <td>2021-08-20</td>
+              <td><span class="status-pill" data-status="archived">Archived</span></td>
+            </tr>
+            <tr data-status="pressed">
+              <td class="id-cell">MG-035</td>
+              <td>Self-heal</td>
+              <td class="latin">Prunella vulgaris</td>
+              <td>Lamiaceae</td>
+              <td>2026-07-16</td>
+              <td><span class="status-pill" data-status="pressed">Pressed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Marginalia Herbarium</span>
+  <span>Pressed, scanned, and catalogued by hand</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
